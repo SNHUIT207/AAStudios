@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="gamestate" sid="5514378714502692" static="0" type="text">start</variable>
+        <event-block sid="2493619171187484">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1649227825100036" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="6838446920370987" type="textselect">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">pad.player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4531695049403613" type="textscore">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="8911582186787161" type="ball">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="0" name="Set text" sid="713465814694975" type="textselect">
+                    <param id="0" name="Text">pad.control</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3560131204311462" type="System">
+                    <param id="0" name="Layer">&quot;selectlay&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5671231051685863" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4884471164144357">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4507507257072174" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">textselect</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1634187908363889" type="pad">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">textselect.player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="121082071433461">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5835555615885274" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;arrow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9158316876432304" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Value">&quot;keys&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="186971753395901" type="textselect">
+                            <param id="0" name="Text">pad.control</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9260825796707342">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3426769542901621" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="5874686311633952" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;keys&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7978650008751531" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Value">&quot;AI&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5702466138945483" type="textselect">
+                            <param id="0" name="Text">pad.control</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7954784754126756">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="900181232284587" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="7268807314154295" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;AI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2749683304150777" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Value">&quot;arrow&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2814983414148974" type="textselect">
+                            <param id="0" name="Text">pad.control</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3567793290255923">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7227092408532364" type="Buttonplay" />
+                <condition id="-9" name="Layer is visible" sid="1445355475330562" type="System">
+                    <param id="0" name="Layer">&quot;selectlay&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7467614400620848" type="textscore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="371198023227177" type="System">
+                    <param id="0" name="Layer">&quot;selectlay&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8849566257706908" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2481210415225313" type="System">
+                    <param id="0" name="Variable">gamestate</param>
+                    <param id="1" name="Value">&quot;ingame&quot;</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3765594324561458" type="ball">
+                    <param id="0" name="Speed">320</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5634112055060403" type="ball">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+                <action id="0" name="Play" sid="3893862610528493" type="Audio">
+                    <param id="0" name="Audio file">whistle</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="1838969237684349" title="Human Controls">
+            <sub-events>
+                <event-block sid="5448572030253972">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8083073578188217" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="707690975926404" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;arrow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4984120851878597" type="pad">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7567997727724191">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4703938833171144" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8192664290334344" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;arrow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6876975891195249" type="pad">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7817409641971204">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2774558103796364" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5186988493702541" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;arrow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6832990850985846" type="pad">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4271628790323725">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="9663297070398975" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1938663203203214" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;arrow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="7800905047104025" type="pad">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2000971990781232">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4977593826428295" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7311553316784704" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;keys&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2065724585834367" type="pad">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9301359008505599">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6087676528489969" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="664372633428527" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;keys&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2530934528037369" type="pad">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5745252989391183">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1702589439949915" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5941998613265016" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;keys&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4200787071180942" type="pad">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6696045754234766">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="7329571038066647" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6499841597933699" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;keys&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="1408812838676622" type="pad">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4811966867284376" title="AI controls">
+            <sub-events>
+                <event-block sid="7029132682630616">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1158670101837134" type="pad">
+                            <param id="0" name="Instance variable">control</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;AI&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="479290402791148">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="7638172576453137" type="pad">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">ball.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="9742031337218599" type="pad">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5849239676741705">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="716711230333138" type="pad">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ball.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="8262246007366215" type="pad">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3441016910031858">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3283760996852486" type="ball">
+                    <param id="0" name="Object">area</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="568555543252232" type="pad">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">area.player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9843431132268156" type="ball">
+                    <param id="0" name="X">320</param>
+                    <param id="1" name="Y">240</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="244012366374255" type="ball">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+                <action id="-11" name="Add to" sid="4243181920815924" type="pad">
+                    <param id="0" name="Instance variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="2136406340729381" type="Audio">
+                    <param id="0" name="Audio file">CheeringSound</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1217081554476245">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8011629442132865" type="textscore">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">pad.player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6303601207746879" type="textscore">
+                    <param id="0" name="Text">pad.score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5560263993957692">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="991618800871651" type="pad">
+                    <param id="0" name="Instance variable">score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="811049439620749" type="System">
+                    <param id="0" name="Variable">gamestate</param>
+                    <param id="1" name="Value">&quot;gameover&quot;</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="146614358940158" type="ball">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5277322701198233" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6598415001818743">
+            <conditions>
+                <condition id="0" name="On clicked" sid="2969782886367614" type="plyagain" />
+                <condition id="-9" name="Layer is visible" sid="6846661758411028" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5324008786071723" type="pad">
+                    <param id="0" name="Instance variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1849242272223957" type="System">
+                    <param id="0" name="Variable">gamestate</param>
+                    <param id="1" name="Value">&quot;ingame&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="8403555965746792" type="ball">
+                    <param id="0" name="X">320</param>
+                    <param id="1" name="Y">240</param>
+                </action>
+                <action id="-2" name="Set Y" sid="2124002899461121" type="pad">
+                    <param id="0" name="Y">220</param>
+                </action>
+                <action id="-1" name="Set X" sid="4517714778188574" type="pad">
+                    <param id="0" name="X">75</param>
+                </action>
+                <action id="-12" name="Set group active" sid="2159934096862378" type="System">
+                    <param id="0" name="Group name">&quot;Human Controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="4751197770372809" type="System">
+                    <param id="0" name="Group name">&quot;AI controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="3385273029402065" type="ball">
+                    <param id="0" name="Speed">320</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3689503713334897" type="ball">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="6535959534851667" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Play" sid="1743498495878243" type="Audio">
+                    <param id="0" name="Audio file">whistle</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1102993598678993">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7078542355027284" type="chngecntrl" />
+                <condition id="-9" name="Layer is visible" sid="55141109904951" type="System">
+                    <param id="0" name="Layer">&quot;gameover&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="765131885606816" type="System" />
+                <action id="-26" name="Restart layout" sid="2015060705282215" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="5320093596544229">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1152711464724947" type="ball">
+                    <param id="0" name="Object">pad</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5823986976786641" type="Audio">
+                    <param id="0" name="Audio file">Ballsound</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5752175199558614">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1903377937992182" type="ball">
+                    <param id="0" name="Object">wall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="7864452880164045" type="Audio">
+                    <param id="0" name="Audio file">Ballsound</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
